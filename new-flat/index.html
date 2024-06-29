@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/signUp.css">
+  <title>New flat</title>
+</head>
+<body>
+  <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+ </div>
+ <div class="pageContainer">
+  <div id="menuModalContainer">
+    <div id="menuMobileContent">
+      <div onclick="closeModalMenu()" class="closeModal">
+        X
+      </div>
+      <div id="mobileLinksList">
+        <a href="/index.html">Homepage</a>
+          <a href="/all-flats/index.html">All flats</a>
+          <a href="/new-flat/index.html">New flat</a>
+          <a
+            class="updateProfile"
+            href="/update-profile/index.html"
+            >Update Profile</a
+          >
+          <p class="logout" onclick="logOut()">Log Out</p>
+      </div>
+    </div>
+  </div>
+  <header id="pageHeader">
+    <div id="headerMobile">
+      <div id="containerElementsHeaderMobile">
+        <div id="menuAndLogo">
+          <img onclick="openModalMenu()" src="/images/menu.png" alt="menu">
+        <h1>RentEase</h1>
+      </div>
+        <p id="usernamePc"></p>
+      </div>
+    </div>
+    <div id="headerContainer">
+      <div id="logoAndNav">
+        <h1>RentEase</h1>
+        <div id="pagesLinks">
+          <a href="/index.html">Homepage</a>
+          <a href="/all-flats/index.html">All flats</a>
+          <a href="/new-flat/index.html">New flat</a>
+        </div>
+      </div>
+      <div>
+        <div id="usernameAndLogout">
+          <p id="username">Hello matheus</p>
+          <span>|</span>
+          <a
+            class="updateProfile"
+            href="/update-profile/index.html"
+            >Update Profile</a
+          >
+          <span>|</span>
+          <p class="logout" onclick="logOut()">Log Out</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="newFlatFormContainer">
+    <div id="newFlatContent">
+    <form class="formSigninAndSignup" action="javascript:addFlat()">
+      <div class="inputBox">
+        <label for="city">City: </label>
+        <input class="inputsSigninSignup" type="text" name="city" id="city" required>
+      </div>
+      <div class="inputBox">
+        <label for="streetName">Street name: </label>
+        <input type="text" name="streetName" id="streetName" required>
+      </div>
+      <div class="inputBox">
+        <label for="streetNumber">Street number: </label>
+        <input type="number" name="streetNumber" id="streetNumber" required>
+      </div>
+      <div class="inputBox">
+        <label for="areaSize">Area size: </label>
+        <input type="number" name="areaSize" id="areaSize" required>
+      </div>
+      <div class="hasAcBox">
+        <label for="hasAc">Has AC:</label>
+        <input type="checkbox" id="hasAc" name="hasAc"/>
+        
+      </div>
+      <div class="inputBox">
+        <label for="yearBuilt">Year built: </label>
+        <input type="number" name="yearBuilt" id="yearBuilt" required>
+      </div>
+      <div class="inputBox">
+        <label for="rentPrice">Rent price: </label>
+        <input type="number" name="rentPrice" id="rentPrice" required>
+      </div>
+      <div class="inputBox">
+        <label for="dateAvailable">Date available: </label>
+        <input type="date" name="dateAvailable" id="dateAvailable" required>
+      </div>
+      <div>
+        <input class="submitButton" type="submit" value="Add new flat">
+      </div>
+    </form>
+  </div>
+  </div>
+</div>
+  <script src="/index.js"></script>
+</body>
+</html>

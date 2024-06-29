@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/signUp.css">
+  <title>Reset password</title>
+</head>
+<body>
+  <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+ </div>
+  <div id="mainContainerSignUp">
+    <div class="signupContainer">
+      <div class="illustrationLoginContainer">
+        <h1>RentEase</h1>
+        <p>Don't want to reset?</p>
+        <button class="alternativeRouteButton" onclick="openLogin()">Login</button>
+      </div>
+      <div class="wrapperTitleAndForm">
+        <h2>Reset Password</h2>
+  <form id="formEmailForgot" class="formSigninAndSignup" action="javascript:resetUser()">
+    <div  class="inputBox">
+      <label for="emailForgot">Email: </label>
+      <input class="inputsSigninSignup" type="email" name="emailForgot" id="emailForgot" required>
+      <p id="emailErrorMessage" class="inputErrorMessage"></p>
+    </div>
+    <input class="submitButton" type="submit" value="Reset">
+  </form>
+  <div id="registerOnResetPassword" class="formResetPassword">
+  <form class="formSigninAndSignup" action="javascript:endResetPassword()">
+    <div class="inputBox">
+      <label for="email">Email: </label>
+      <input class="inputsSigninSignup" type="email" name="email" id="email" disabled required>
+    </div>
+    <div class="inputBox">
+      <label for="password">Password: </label>
+      <input class="inputsSigninSignup" type="password" name="password" id="password" required minlength="6">
+      <p id="passwordErrorMessage" class="inputErrorMessage"></p>
+    </div>
+    <div class="inputBox">
+      <label for="passwordConfirmation">Password confirmation: </label>
+      <input class="inputsSigninSignup" type="password" name="passwordConfirmation" id="passwordConfirmation" required minlength="6">
+      <p id="passwordConfirmationErrorMessage" class="inputErrorMessage"></p>
+    </div>
+    <div class="inputBox">
+      <label for="firstName">First Name: </label>
+      <input class="inputsSigninSignup" type="text" name="firstName" id="firstName" required>
+    </div>
+    <div class="inputBox">
+      <label for="lastName">Last Name: </label>
+      <input class="inputsSigninSignup" type="text" name="lastName" id="lastName" required>
+    </div>
+    <div class="inputBox">
+      <label for="birthDate">Birth Date: </label>
+      <input class="inputsSigninSignup" type="date" name="birthDate" id="birthDate" required min="1904-01-01" max="2006-01-01">
+    </div>
+    <div>
+      <input class="submitButton" type="submit" value="Reset">
+    </div>
+  </form>
+
+</div>
+<div class="warningsMobile">
+  <p >Don't want to reset? <a href="/signin/index.html">Login</a></p>
+</div>
+      </div>
+</div>
+  </div>
+  <script src="/index.js"></script>
+</body>
+</html>

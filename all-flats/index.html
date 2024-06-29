@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/signUp.css">
+    <title>All flats</title>
+  </head>
+  <body onload="renderFlatsAllFlatsPage()">
+ 
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+   </div>
+   <div class="pageContainer">
+    <div id="menuModalContainer">
+      <div id="menuMobileContent">
+        <div onclick="closeModalMenu()" class="closeModal">
+          X
+        </div>
+        <div id="mobileLinksList">
+          <a href="/index.html">Homepage</a>
+            <a href="/all-flats/index.html">All flats</a>
+            <a href="/new-flat/index.html">New flat</a>
+            <a
+              class="updateProfile"
+              href="/update-profile/index.html"
+              >Update Profile</a
+            >
+            <p class="logout" onclick="logOut()">Log Out</p>
+        </div>
+      </div>
+    </div>
+    <div id="filterModalContainer">
+      <div id="filterMobileContent">
+        <div onclick="closeModalFilter()" class="closeModal">
+          X
+        </div>
+        <div id="filterWrapper">
+        <div id="filterContainer">
+
+          <h2>Filters</h2>
+          <div class="inputBox">
+            <label for="city">Search for a city: </label>
+            <input type="text" id="city" placeholder="Vancouver" />
+          </div>
+          <div>
+            <h4 class="headerRangeInput">Price range</h4>
+            <div class="priceAndAreaContainerFilter">
+            <div class="inputBox">
+              <label for="minPrice">Min</label>
+              <input class="rangeInput" type="number" id="minPrice" placeholder="0" />
+            </div>
+            <div class="inputBox">
+              <label for="maxPrice">Max</label>
+              <input class="rangeInput"  type="number" id="maxPrice" placeholder="2000" />
+            </div>
+          </div>
+          </div>
+          <div>
+            <h4 class="headerRangeInput">Area size range</h4>
+            <div class="priceAndAreaContainerFilter">
+            <div class="inputBox">
+              <label for="minArea">Min</label>
+              <input class="rangeInput" type="number" id="minArea" placeholder="0" />
+            </div>
+            <div class="inputBox">
+              <label for="maxArea">Max</label>
+              <input class="rangeInput" type="number" id="maxArea" placeholder="500" />
+            </div>
+          </div>  
+          </div>
+          <button class="submitButtonModalMobile" onclick="renderFlatsAllFlatsPage()">Filter</button>
+        </div>
+      </div>
+      </div>
+    </div>
+    <header id="pageHeader">
+      <div id="headerMobile">
+        <div id="containerElementsHeaderMobile">
+          <div id="menuAndLogo">
+            <img onclick="openModalMenu()" src="/images/menu.png" alt="menu">
+          <h1>RentEase</h1>
+        </div>
+          <p id="usernamePc"></p>
+        </div>
+      </div>
+      <div id="headerContainer">
+        <div id="logoAndNav">
+          <h1>RentEase</h1>
+          <div id="pagesLinks">
+            <a href="/index.html">Homepage</a>
+            <a href="/all-flats/index.html">All flats</a>
+            <a href="/new-flat/index.html">New flat</a>
+          </div>
+        </div>
+        <div>
+          <div id="usernameAndLogout">
+            <p id="username">Hello matheus</p>
+            <span>|</span>
+            <a
+              class="updateProfile"
+              href="/update-profile/index.html"
+              >Update Profile</a
+            >
+            <span>|</span>
+            <p class="logout" onclick="logOut()">Log Out</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="flatsContent">
+      <div class="wrapperFiltersAndFlats">
+        <div id="filterSide">
+          <div id="filterContainer">
+            <h2>Filters</h2>
+            <div class="inputBox">
+              <label for="city">Search for a city: </label>
+              <input type="text" id="city" placeholder="Vancouver" />
+            </div>
+            <div>
+              <h4 class="headerRangeInput">Price range</h4>
+              <div class="priceAndAreaContainerFilter">
+              <div class="inputBox">
+                <label for="minPrice">Min</label>
+                <input class="rangeInput" type="number" id="minPrice" placeholder="0" />
+              </div>
+              <div class="inputBox">
+                <label for="maxPrice">Max</label>
+                <input class="rangeInput"  type="number" id="maxPrice" placeholder="2000" />
+              </div>
+            </div>
+            </div>
+            <div>
+              <h4 class="headerRangeInput">Area size range</h4>
+              <div class="priceAndAreaContainerFilter">
+              <div class="inputBox">
+                <label for="minArea">Min</label>
+                <input class="rangeInput" type="number" id="minArea" placeholder="0" />
+              </div>
+              <div class="inputBox">
+                <label for="maxArea">Max</label>
+                <input class="rangeInput" type="number" id="maxArea" placeholder="500" />
+              </div>
+            </div>  
+            </div>
+            <button class="submitButton" onclick="renderFlatsAllFlatsPage()">Filter</button>
+          </div>
+         
+          
+          
+        </div>
+        <div id="sortsAndFlats">
+          <div id="sortsContainer">
+            <h2>Sorts</h2>
+            <select name="" id="selectSort" onchange="renderFlatsAllFlatsPage()">
+              <option value="default">Default</option>
+              <option value="city-a-z">City A-Z</option>
+              <option value="city-z-a">City Z-A</option>
+              <option value="price-l-h">Price Low-High</option>
+              <option value="price-h-l">Price High-Low</option>
+              <option value="area-l-h">Area Low-High</option>
+              <option value="area-h-l">Area High-Low</option>
+            </select>
+
+            <button onclick="openModalFilter()" id="buttonOpenFiltersModal">Filters</button>
+          </div>
+          <div id="flatsWrapper" class="containerFlats"></div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+    <script src="/index.js"></script>
+  </body>
+</html>

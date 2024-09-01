@@ -526,8 +526,8 @@ const addFlat = () => {
 
 const userSession = JSON.parse(localStorage.getItem("user"))
 
-document.getElementById("username").textContent = `Hello ${userSession.firstName} ${userSession.lastName}`
-document.getElementById("usernamePc").textContent = `Hello ${userSession.firstName} ${userSession.lastName}`
+document.getElementById("username").textContent = `${userSession.firstName} ${userSession.lastName}`
+document.getElementById("usernamePc").textContent = `${userSession.firstName} ${userSession.lastName}`
 
 //Filters functions
 
